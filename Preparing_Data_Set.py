@@ -69,3 +69,5 @@ plt.show()
 sia = SentimentIntensityAnalyzer()
 df["sentiment_label"] = df["reviewText"].apply(lambda x: "pos" if sia.polarity_scores(x)["compound"] > 0 else "neg")
 
+# Save Data Set
+df.to_pickle("final_df_pickle.py")
